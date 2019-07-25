@@ -22,7 +22,7 @@ class CommentAdd extends React.Component {
 			this.props.addComment(this.state.text);
 			this.setState({ text: '' });
 		} else {
-			alert('Please...');
+			alert('Please fill the form!');
 		}
 		
 	}
