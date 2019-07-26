@@ -12,14 +12,14 @@ class CommentAdd extends React.Component {
 	}
 
 	handleChange(e) {
-		//const { value } = e.target;
 		this.setState({ text: e.target.value });
 	}
 
 	submitComment() {
-		if(this.state.text.length !== 0) {
-			console.log(this.state.text);
-			this.props.addComment(this.state.text);
+		const { text } = this.state;
+		const { addComment } = this.props;
+		if(text.length !== 0) {
+			addComment(text);
 			this.setState({ text: '' });
 		} else {
 			alert('Please fill the form!');
